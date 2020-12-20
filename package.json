@@ -1,11 +1,13 @@
 {
-  "name": "server",
+  "name": "insta_clone",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "backend": "node server/bin/www",
+    "dev": "concurrently \"npm run backend\" \"npm run serve --prefix front\""
   },
   "dependencies": {
+    "concurrently": "^5.3.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
