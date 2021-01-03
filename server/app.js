@@ -10,6 +10,9 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var mainRouter = require("./routes/main");
 var mainApiRouter = require("./routes/api/main");
+  //2021-01-03
+var listRouter = require("./routes/list");
+var detailRouter = require("./routes/detail");
 
 var app = express();
 
@@ -29,6 +32,9 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/main", mainRouter);
 app.use("/api/main", mainApiRouter);
+  //2021-01-03
+app.use("/list", listRouter);
+app.use("/detail", detailRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
