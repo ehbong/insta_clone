@@ -11,4 +11,14 @@ router.get("", function (req, res, next) {
   });
 });
 
+router.get("/api/main", function (req, res, next) {
+  return res.status(200).json({
+    result: 'What?!',
+  });
+});
+
+router.get("/test1/:test1/test2/:test2", function (req, res, next) {
+  return res.status(200).json(req.params);
+});
+
 module.exports = router;
