@@ -2,6 +2,7 @@
 
 const { json } = require("express");
 var express = require("express");
+var qs = require('querystring');
 var router = express.Router();
 
 /* GET home page. */
@@ -22,7 +23,10 @@ router.get("/test1/:test1/test2/:test2", function (req, res, next) {
 });
 
 router.post("/test3", function (req, res, next) {
-  return res.status(200).json(req.params);
+  // return res.status(200).json(req.params);
+  return res.status(200).json({
+      test: req.body.test}
+    );
 });
 
 module.exports = router;

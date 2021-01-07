@@ -6,6 +6,15 @@ block content
 
   a(href="http://localhost:3000/") main에게로
   br
-  a(href="http://localhost:3000/users") users에게로  
+  a(href="http://localhost:3000/users") users호출
   br
   a(href="http://localhost:3000/list") list에게로 
+  br
+  a(href="http://localhost:3000/api/main") api/main호출
+  br
+  a(href="http://localhost:3000/api/main/test1/t/test2/tt") api/main get 방식 호출
+  br
+  //a(href="http://localhost:3000/api/main/test3") api/main post 방식 호출
+  form(action="/api/main/test3", method="post")
+    input(type="text", name="test", value="test?")
+    input(type="submit", value="api/main post!!")
