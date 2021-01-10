@@ -1,0 +1,58 @@
+extends layout
+
+block content
+  h1 메인페이지
+  p Welcome to #{title}
+
+  a(href="http://localhost:3000/dummy") logout~
+
+  table(style="width:500px; background-color:yellow;") 
+    tr
+        th(colspan=5) 프로필 (닉네임)
+    tr
+        td(colspan=2, rowspan=5)
+            img(src="https://illlustrations.co/static/188160589e999c63c66e0efeaed56ce4/ee604/105-freelancer.png", alt="프로필사진", width="100px")
+        td 게시물수                      
+        td 팔로워수                       
+        td 팔로잉수
+    tr    
+        td 123                      
+        td 45                       
+        td 67
+    tr    
+        td
+        td
+        td
+    tr    
+        td
+        td
+        td
+    tr    
+        td
+        td
+        td
+    tr(style="heigth=100px")                       
+        td(colspan=5) 사용자 이름
+  br
+  table(style="width:500px; background-color:yellow;") 
+    tr
+        td 
+            a(href="http://localhost:3000/dummy/list/1/") 1
+                img(src="https://tasteminty.com/page/wp-content/uploads/2017/01/girlreadingchill2.png", alt="", width="150px")
+        td  
+            a(href="http://localhost:3000/dummy/list/2/") 2
+                img(src="https://tasteminty.com/page/wp-content/uploads/2017/01/girlreadingchill2.png", alt="", width="150px")
+        td 
+            a(href="http://localhost:3000/dummy/list/3/") 3
+                img(src="https://tasteminty.com/page/wp-content/uploads/2017/01/girlreadingchill2.png", alt="", width="150px")
+    tr
+        td 
+            a(href="http://localhost:3000/dummy/list/4/") 4
+                img(src="https://tasteminty.com/page/wp-content/uploads/2017/01/girlreadingchill2.png", alt="", width="150px")
+        td 
+            a(href="http://localhost:3000/dummy/list/5/") 5
+                img(src="https://tasteminty.com/page/wp-content/uploads/2017/01/girlreadingchill2.png", alt="", width="150px")
+        td 
+            a(href="http://localhost:3000/dummy/list/6/") 6
+                img(src="https://tasteminty.com/page/wp-content/uploads/2017/01/girlreadingchill2.png", alt="", width="150px")
+   

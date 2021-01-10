@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 로그인 페이지
+  p Welcome to #{title}
+
+  form(action="/dummy/login", method="post")
+    input(type="text", name="nicName")
+    input(type="password", name="password")
+    input(type="submit", value="LOG IN")

@@ -12,7 +12,9 @@ var mainRouter = require("./routes/main");
 var mainApiRouter = require("./routes/api/main");
   //2021-01-03
 var listRouter = require("./routes/list");
-var detailRouter = require("./routes/detail");
+var detailRouter = require("./routes/detail"); 
+  //2021-01-09
+var dummyRouter = require("./routes/dummy");
 
 var app = express();
 
@@ -35,6 +37,8 @@ app.use("/api/main", mainApiRouter);
   //2021-01-03
 app.use("/list", listRouter);
 app.use("/detail", detailRouter);
+  //2021-01-09
+app.use("/dummy", dummyRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
