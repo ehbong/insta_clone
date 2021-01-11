@@ -33,5 +33,10 @@ router.get("/list/:listNum/", function (req, res, next) {
     );
 });
 
+/* GET test. */
+router.get("/test", function (req, res, next) {
+    res.render("dummy/test1", { title: "dummy test1" });
+  });
+
 
 module.exports = router;
