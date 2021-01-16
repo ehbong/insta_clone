@@ -16,7 +16,11 @@ var detailRouter = require("./routes/detail");
   //2021-01-09
 var dummyRouter = require("./routes/dummy");
 
+var sequelize = require('./models').sequelize;  // mysql의 시퀄라이저 모델
+
 var app = express();
+
+sequelize.sync();     // 서버가 실행될 때 시퀄라이저의 스키마를 DB에 적용시킨다
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -55,5 +59,6 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
+
 
 module.exports = app;
